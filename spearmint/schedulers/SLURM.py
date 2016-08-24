@@ -194,4 +194,4 @@ class SLURMScheduler(AbstractClusterScheduler):
         return 'sbatch -e %s -o %s -J %s' % (output_file, output_file, job_name)
 
     def output_regexp(self):
-        return r'Submitted batch job (\d+)'
+        return b'Submitted batch job (\d+)'

@@ -200,7 +200,7 @@ class PBSScheduler(AbstractClusterScheduler):
         super(PBSScheduler, self).__init__(*args, **kwargs)
 
     def output_regexp(self):
-        return r'(^\d+)'
+        return b'(^\d+)'
 
     def submit_command(self, output_file, job_name):
         # Note for posterity: ssh bint01 "source BLAH && qsub BLAH" doesn't work
